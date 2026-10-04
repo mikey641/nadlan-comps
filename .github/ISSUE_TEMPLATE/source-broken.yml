@@ -1,0 +1,32 @@
+name: A source stopped working
+description: GovMap, nadlan.gov.il, Madlan or Yad2 returns error / no-data / blocked where it used to work.
+labels: [source-broken]
+body:
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source
+      options: [govmap, nadlan-gov, madlan, yad2, cbs]
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: Status and reason
+      description: The `status` and `reason` from the report (run the CLI with `-v --json`).
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command or call
+      render: sh
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where it runs
+      options: [Desktop (macOS / Windows), Linux with display, Headless Linux server, Serverless / cloud function]
+    validations:
+      required: true

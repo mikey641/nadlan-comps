@@ -1,0 +1,25 @@
+name: Bug report
+description: Something returns a wrong number, crashes, or behaves unexpectedly.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you ran, what you expected, what you got.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: The `valueAsset` call or CLI command. A public address is fine; please do not share private details.
+      render: ts
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: nadlan-comps version / Node version / OS
+    validations:
+      required: true

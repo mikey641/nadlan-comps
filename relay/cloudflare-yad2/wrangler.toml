@@ -1,0 +1,5 @@
+name = "yad2-relay"
+main = "worker.js"
+compatibility_date = "2026-01-01"
+
+# Set the shared secret with:  wrangler secret put RELAY_TOKEN
